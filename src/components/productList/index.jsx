@@ -5,12 +5,16 @@ import "./product-list.scss";
 
 class ProductList extends React.Component {
   render() {
-    const { products } = this.props;
+    const { products, onBasketClick } = this.props;
 
     return (
       <div className="product-list">
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product 
+            key={product.id} 
+            product={product} 
+            onBasketClick={() => {onBasketClick(product)}}
+          />
         ))}
       </div>
     );

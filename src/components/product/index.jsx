@@ -22,7 +22,7 @@ export class Product extends React.Component {
             <span className="product-info-price">{price}</span>
             <button 
               className="product-add-btn"
-              onClick={() => {onBasketClick()}}
+              onClick={onBasketClick}
             >
               <img src="img/basket.svg" width="20" height="20" alt="Добавить в корзину"/>
             </button>
